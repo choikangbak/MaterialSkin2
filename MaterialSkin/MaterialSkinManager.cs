@@ -48,11 +48,12 @@
             addFont(Resources.Roboto_Medium);
             addFont(Resources.Roboto_Bold);
             addFont(Resources.Roboto_Black);
+            addFont(Resources.NanumSquareRound_Bold);
 
-            RobotoFontFamilies = new Dictionary<string, FontFamily>();
+            FontFamilies = new Dictionary<string, FontFamily>();
             foreach (FontFamily ff in privateFontCollection.Families.ToArray())
             {
-                RobotoFontFamilies.Add(ff.Name.Replace(' ', '_'), ff);
+                FontFamilies.Add(ff.Name.Replace(' ', '_'), ff);
             }
 
             // create and save font handles for GDI
@@ -297,48 +298,48 @@
             switch (type)
             {
                 case fontType.H1:
-                    return new Font(RobotoFontFamilies["Roboto_Light"], 96f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto_Light"], 96f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.H2:
-                    return new Font(RobotoFontFamilies["Roboto_Light"], 60f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto_Light"], 60f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.H3:
-                    return new Font(RobotoFontFamilies["Roboto"], 48f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto"], 48f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.H4:
-                    return new Font(RobotoFontFamilies["Roboto"], 34f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto"], 34f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.H5:
-                    return new Font(RobotoFontFamilies["Roboto"], 24f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto"], 24f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.H6:
-                    return new Font(RobotoFontFamilies["Roboto_Medium"], 20f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 20f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.Subtitle1:
-                    return new Font(RobotoFontFamilies["Roboto"], 16f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto"], 16f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.Subtitle2:
-                    return new Font(RobotoFontFamilies["Roboto_Medium"], 14f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto_Medium"], 14f, FontStyle.Bold, GraphicsUnit.Pixel);
                 
                 case fontType.SubtleEmphasis:
-                    return new Font(RobotoFontFamilies["Roboto"], 12f, FontStyle.Italic, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto"], 12f, FontStyle.Italic, GraphicsUnit.Pixel);
 
                 case fontType.Body1:
-                    return new Font(RobotoFontFamilies["Roboto"], 14f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto"], 14f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.Body2:
-                    return new Font(RobotoFontFamilies["Roboto"], 12f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto"], 12f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.Button:
-                    return new Font(RobotoFontFamilies["Roboto"], 14f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 14f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.Caption:
-                    return new Font(RobotoFontFamilies["Roboto"], 12f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto"], 12f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.Overline:
-                    return new Font(RobotoFontFamilies["Roboto"], 10f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["Roboto"], 10f, FontStyle.Regular, GraphicsUnit.Pixel);
             }
-            return new Font(RobotoFontFamilies["Roboto"], 14f, FontStyle.Regular, GraphicsUnit.Pixel);
+            return new Font(FontFamilies["Roboto"], 14f, FontStyle.Regular, GraphicsUnit.Pixel);
         }
 
         /// <summary>
@@ -365,7 +366,7 @@
         // Font stuff
         private Dictionary<string, IntPtr> logicalFonts;
 
-        private Dictionary<string, FontFamily> RobotoFontFamilies;
+        private Dictionary<string, FontFamily> FontFamilies;
 
         private PrivateFontCollection privateFontCollection = new PrivateFontCollection();
 
