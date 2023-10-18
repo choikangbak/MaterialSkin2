@@ -271,7 +271,7 @@
             _animationManager.OnAnimationProgress += sender => Invalidate();
 
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            AutoSize = true;
+            AutoSize = false;
             Margin = new Padding(4, 6, 4, 6);
             Padding = new Padding(0);
         }
@@ -286,7 +286,9 @@
             {
                 base.Text = value;
                 if (!String.IsNullOrEmpty(value))
+                {
                     _textSize = CreateGraphics().MeasureString(value.ToUpper(), SkinManager.getFontByType(MaterialSkinManager.fontType.Button));
+                }
                 else
                 {
                     _textSize.Width = 0;

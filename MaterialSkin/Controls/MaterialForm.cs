@@ -28,7 +28,7 @@ namespace MaterialSkin.Controls
         [Category("Layout")]
         public bool Sizable { get; set; }
 
-        [Category("Material Skin"), Browsable(true), DisplayName("Form Style"), DefaultValue(FormStyles.ActionBar_40)]
+        [Category("Material Skin"), Browsable(true), DisplayName("Form Style"), DefaultValue(FormStyles.ActionBar_56)]
         public FormStyles FormStyle
         {
             get => _formStyle;
