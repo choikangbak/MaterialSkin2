@@ -361,7 +361,7 @@
 
         private void setHeightVars()
         {
-            HEIGHT = UseTallSize ? 50 : 36;
+            HEIGHT = UseTallSize ? 50 : 32;
             Size = new Size(Size.Width, HEIGHT);
             LINE_Y = HEIGHT - BOTTOM_PADDING;
             ItemHeight = HEIGHT - 7;

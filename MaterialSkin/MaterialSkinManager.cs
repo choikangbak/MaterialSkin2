@@ -42,13 +42,13 @@
             // And https://www.codeproject.com/Articles/107376/Embedding-Font-To-Resources
 
             // Add font to system table in memory and save the font family
+            addFont(Resources.NanumSquareRound_Bold);
             addFont(Resources.Roboto_Thin);
-            addFont(Resources.Roboto_Light);
+            addFont(Resources.Roboto_Bold);
             addFont(Resources.Roboto_Regular);
             addFont(Resources.Roboto_Medium);
-            addFont(Resources.Roboto_Bold);
+            addFont(Resources.Roboto_Light);
             addFont(Resources.Roboto_Black);
-            addFont(Resources.NanumSquareRound_Bold);
 
             FontFamilies = new Dictionary<string, FontFamily>();
             foreach (FontFamily ff in privateFontCollection.Families.ToArray())
@@ -175,7 +175,7 @@
         // Generic back colors - for user controls
         private static readonly Color BACKGROUND_LIGHT = Color.FromArgb(255, 255, 255, 255);
         private static readonly Brush BACKGROUND_LIGHT_BRUSH = new SolidBrush(BACKGROUND_LIGHT);
-        private static readonly Color BACKGROUND_DARK = Color.FromArgb(255, 65, 65, 65);
+        private static readonly Color BACKGROUND_DARK = Color.FromArgb(255, 45, 45, 45);
         private static readonly Brush BACKGROUND_DARK_BRUSH = new SolidBrush(BACKGROUND_DARK);
         private static readonly Color BACKGROUND_ALTERNATIVE_LIGHT = Color.FromArgb(10, 0, 0, 0);
         private static readonly Brush BACKGROUND_ALTERNATIVE_LIGHT_BRUSH = new SolidBrush(BACKGROUND_ALTERNATIVE_LIGHT);
@@ -207,7 +207,7 @@
         // Backdrop colors - for containers, like forms or panels
         private static readonly Color BACKDROP_LIGHT = Color.FromArgb(255, 242, 242, 242);
         private static readonly Brush BACKDROP_LIGHT_BRUSH = new SolidBrush(BACKGROUND_LIGHT);
-        private static readonly Color BACKDROP_DARK = Color.FromArgb(255, 50, 50, 50);
+        private static readonly Color BACKDROP_DARK = Color.FromArgb(255, 30, 30, 30);
         private static readonly Brush BACKDROP_DARK_BRUSH = new SolidBrush(BACKGROUND_DARK);
 
         //Other colors
@@ -456,7 +456,7 @@
             {
                 controlToUpdate.BackColor = controlToUpdate.Parent.BackColor;
                 controlToUpdate.ForeColor = TextHighEmphasisColor;
-                controlToUpdate.Font = getFontByType(MaterialSkinManager.fontType.Body1);
+                //controlToUpdate.Font = getFontByType(MaterialSkinManager.fontType.Body1);
             }
 
             // Recursive call to control's children

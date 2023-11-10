@@ -58,6 +58,7 @@ namespace MaterialSkin.Controls
             set
             {
                 _UseTallSize = value;
+                baseTextBox.Font = _UseTallSize ? base.Font : SkinManager.getFontByType(MaterialSkinManager.fontType.Body2);
                 UpdateHeight();
                 UpdateRects();
                 Invalidate();
@@ -1318,7 +1319,7 @@ namespace MaterialSkin.Controls
             baseTextBox = new BaseTextBox
             {
                 BorderStyle = BorderStyle.None,
-                Font = base.Font,
+                Font =  base.Font,
                 ForeColor = SkinManager.TextHighEmphasisColor,
                 Multiline = false,
                 Location = new Point(LEFT_PADDING, HEIGHT/2- FONT_HEIGHT/2),
@@ -1843,7 +1844,7 @@ namespace MaterialSkin.Controls
 
         private void UpdateHeight()
         {
-            HEIGHT = _UseTallSize ? 48 : 36;
+            HEIGHT = _UseTallSize ? 48 : 26;
             HEIGHT += _helperTextHeight;
             Size = new Size(Size.Width, HEIGHT);
         }

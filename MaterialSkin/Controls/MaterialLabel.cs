@@ -133,7 +133,8 @@
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            g.Clear(Parent.BackColor);
+            BackColor = Color.Transparent;
+            //g.Clear(Parent.BackColor);
 
             // Draw Text
             using (NativeTextRenderer NativeText = new NativeTextRenderer(g))
