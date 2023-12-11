@@ -58,26 +58,26 @@
 
             // create and save font handles for GDI
             logicalFonts = new Dictionary<string, IntPtr>(18);
-            logicalFonts.Add("H1", createLogicalFont("나눔스퀘어라운드 Bold", 96, NativeTextRenderer.logFontWeight.FW_LIGHT));
-            logicalFonts.Add("H2", createLogicalFont("나눔스퀘어라운드 Bold", 60, NativeTextRenderer.logFontWeight.FW_LIGHT));
-            logicalFonts.Add("H3", createLogicalFont("나눔스퀘어라운드 Bold", 48, NativeTextRenderer.logFontWeight.FW_REGULAR));
-            logicalFonts.Add("H4", createLogicalFont("나눔스퀘어라운드 Bold", 34, NativeTextRenderer.logFontWeight.FW_REGULAR));
-            logicalFonts.Add("H5", createLogicalFont("나눔스퀘어라운드 Bold", 24, NativeTextRenderer.logFontWeight.FW_REGULAR));
-            logicalFonts.Add("H6", createLogicalFont("나눔스퀘어라운드 Bold", 20, NativeTextRenderer.logFontWeight.FW_MEDIUM));
-            logicalFonts.Add("Subtitle1", createLogicalFont("나눔스퀘어라운드 Bold", 16, NativeTextRenderer.logFontWeight.FW_REGULAR));
-            logicalFonts.Add("Subtitle2", createLogicalFont("나눔스퀘어라운드 Bold", 14, NativeTextRenderer.logFontWeight.FW_MEDIUM));
-            logicalFonts.Add("SubtleEmphasis", createLogicalFont("나눔스퀘어라운드 Bold", 12, NativeTextRenderer.logFontWeight.FW_NORMAL, 1));
-            logicalFonts.Add("Body1", createLogicalFont("나눔스퀘어라운드 Bold", 16, NativeTextRenderer.logFontWeight.FW_REGULAR));
-            logicalFonts.Add("Body2", createLogicalFont("나눔스퀘어라운드 Bold", 14, NativeTextRenderer.logFontWeight.FW_REGULAR));
-            logicalFonts.Add("Button", createLogicalFont("나눔스퀘어라운드 Bold", 14, NativeTextRenderer.logFontWeight.FW_MEDIUM));
-            logicalFonts.Add("Caption", createLogicalFont("나눔스퀘어라운드 Bold", 12, NativeTextRenderer.logFontWeight.FW_REGULAR));
-            logicalFonts.Add("Overline", createLogicalFont("나눔스퀘어라운드 Bold", 10, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("H1", createLogicalFont("NanumSquareRound Bold", 96, NativeTextRenderer.logFontWeight.FW_LIGHT));
+            logicalFonts.Add("H2", createLogicalFont("NanumSquareRound Bold", 60, NativeTextRenderer.logFontWeight.FW_LIGHT));
+            logicalFonts.Add("H3", createLogicalFont("NanumSquareRound Bold", 48, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("H4", createLogicalFont("NanumSquareRound Bold", 34, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("H5", createLogicalFont("NanumSquareRound Bold", 24, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("H6", createLogicalFont("NanumSquareRound Bold", 20, NativeTextRenderer.logFontWeight.FW_MEDIUM));
+            logicalFonts.Add("Subtitle1", createLogicalFont("NanumSquareRound Bold", 16, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("Subtitle2", createLogicalFont("NanumSquareRound Bold", 14, NativeTextRenderer.logFontWeight.FW_MEDIUM));
+            logicalFonts.Add("SubtleEmphasis", createLogicalFont("NanumSquareRound Bold", 12, NativeTextRenderer.logFontWeight.FW_NORMAL, 1));
+            logicalFonts.Add("Body1", createLogicalFont("NanumSquareRound Bold", 16, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("Body2", createLogicalFont("NanumSquareRound Bold", 14, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("Button", createLogicalFont("NanumSquareRound Bold", 14, NativeTextRenderer.logFontWeight.FW_MEDIUM));
+            logicalFonts.Add("Caption", createLogicalFont("NanumSquareRound Bold", 12, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("Overline", createLogicalFont("NanumSquareRound Bold", 10, NativeTextRenderer.logFontWeight.FW_REGULAR));
             // Logical fonts for textbox animation
-            logicalFonts.Add("textBox16", createLogicalFont("나눔스퀘어라운드 Bold", 16, NativeTextRenderer.logFontWeight.FW_REGULAR));
-            logicalFonts.Add("textBox15", createLogicalFont("나눔스퀘어라운드 Bold", 15, NativeTextRenderer.logFontWeight.FW_REGULAR));
-            logicalFonts.Add("textBox14", createLogicalFont("나눔스퀘어라운드 Bold", 14, NativeTextRenderer.logFontWeight.FW_REGULAR));
-            logicalFonts.Add("textBox13", createLogicalFont("나눔스퀘어라운드 Bold", 13, NativeTextRenderer.logFontWeight.FW_MEDIUM));
-            logicalFonts.Add("textBox12", createLogicalFont("나눔스퀘어라운드 Bold", 12, NativeTextRenderer.logFontWeight.FW_MEDIUM));
+            logicalFonts.Add("textBox16", createLogicalFont("NanumSquareRound Bold", 16, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("textBox15", createLogicalFont("NanumSquareRound Bold", 15, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("textBox14", createLogicalFont("NanumSquareRound Bold", 14, NativeTextRenderer.logFontWeight.FW_REGULAR));
+            logicalFonts.Add("textBox13", createLogicalFont("NanumSquareRound Bold", 13, NativeTextRenderer.logFontWeight.FW_MEDIUM));
+            logicalFonts.Add("textBox12", createLogicalFont("NanumSquareRound Bold", 12, NativeTextRenderer.logFontWeight.FW_MEDIUM));
         }
 
         // Destructor
@@ -298,48 +298,48 @@
             switch (type)
             {
                 case fontType.H1:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 96f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 96f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.H2:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 60f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 60f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.H3:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 48f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 48f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.H4:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 34f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 34f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.H5:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 24f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 24f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.H6:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 20f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 20f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.Subtitle1:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 20f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 20f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.Subtitle2:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 20f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 20f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.SubtleEmphasis:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 12f, FontStyle.Italic, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 12f, FontStyle.Italic, GraphicsUnit.Pixel);
 
                 case fontType.Body1:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 10f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 10f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.Body2:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 10f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 10f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.Button:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 14f, FontStyle.Bold, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 14f, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 case fontType.Caption:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 12f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 12f, FontStyle.Regular, GraphicsUnit.Pixel);
 
                 case fontType.Overline:
-                    return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 10f, FontStyle.Regular, GraphicsUnit.Pixel);
+                    return new Font(FontFamilies["NanumSquareRound_Bold"], 10f, FontStyle.Regular, GraphicsUnit.Pixel);
             }
-            return new Font(FontFamilies["나눔스퀘어라운드_Bold"], 14f, FontStyle.Regular, GraphicsUnit.Pixel);
+            return new Font(FontFamilies["NanumSquareRound_Bold"], 14f, FontStyle.Regular, GraphicsUnit.Pixel);
         }
 
         /// <summary>
