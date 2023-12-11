@@ -59,6 +59,7 @@ namespace MaterialSkin.Controls
             {
                 _UseTallSize = value;
                 baseTextBox.Font = _UseTallSize ? base.Font : SkinManager.getFontByType(MaterialSkinManager.fontType.Body2);
+                FONT_HEIGHT = _UseTallSize ? 20 : 16;
                 UpdateHeight();
                 UpdateRects();
                 Invalidate();
@@ -1263,11 +1264,11 @@ namespace MaterialSkin.Controls
         private const int ICON_SIZE = 24;
         private const int HINT_TEXT_SMALL_SIZE = 18;
         private const int HINT_TEXT_SMALL_Y = 4;
-        private const int LEFT_PADDING = 16;
+        private const int LEFT_PADDING = 8;
         private const int RIGHT_PADDING = 12;
         private const int ACTIVATION_INDICATOR_HEIGHT = 2;
         private const int HELPER_TEXT_HEIGHT = 16;
-        private const int FONT_HEIGHT = 20;
+        private int FONT_HEIGHT = 20;
         
         private int HEIGHT = 48;
 
