@@ -200,19 +200,20 @@
         private bool useAccentColor;
         private MaterialButtonType type;
         private MaterialButtonDensity _density;
-        private Brush customBackBrush;
-        private Color customFrontBrush;
+        private Color customBackColor;
+
 
         public Color CustomBackColor
         {
-            set => customBackBrush = new SolidBrush(value);
+            get => customBackColor;
+            set
+            {
+                customBackColor = value;
+                Invalidate();
+            }
         }
 
-        public Color CustomForeColor
-        {
-            set => customFrontBrush = value;
-        }
-
+   
         [Category("Material Skin")]
         /// <summary>
         /// Gets or sets the Icon
@@ -253,8 +254,6 @@
             Density = MaterialButtonDensity.Default;
             NoAccentTextColor = Color.Empty;
             CharacterCasing = CharacterCasingEnum.Upper;
-            customBackBrush = SkinManager.ColorScheme.PrimaryBrush;
-            customFrontBrush = Color.White;
 
             _animationManager = new AnimationManager(false)
             {
@@ -463,12 +462,12 @@
                 // High emphasis
                 else if (HighEmphasis)
                 {
-                    g.FillPath(UseAccentColor ? customBackBrush : SkinManager.ColorScheme.PrimaryBrush, buttonPath);
+                    g.FillPath(UseAccentColor ? SkinManager.ColorScheme.AccentBrush : SkinManager.ColorScheme.PrimaryBrush, buttonPath);
                 }
                 // Mormal
                 else
                 {
-                    using (SolidBrush normalBrush = new SolidBrush(SkinManager.BackgroundColor))
+                    using (SolidBrush normalBrush = new SolidBrush(CustomBackColor))
                     {
                         g.FillPath(normalBrush, buttonPath);
                     }
@@ -554,7 +553,7 @@
                 NoAccentTextColor == Color.Empty ? 
                 SkinManager.ColorScheme.PrimaryColor :  // Outline or Text and emphasis
                 NoAccentTextColor : // User defined Outline or Text and emphasis
-                customFrontBrush : // Contained and Emphasis
+                SkinManager.ColorScheme.TextColor : // Contained and Emphasis
                 SkinManager.TextHighEmphasisColor) : // Cointained and accent
                 SkinManager.TextDisabledOrHintColor; // Disabled
 
